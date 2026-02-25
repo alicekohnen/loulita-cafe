@@ -1,39 +1,47 @@
 :root {
-  --coral: #f48c8c;
-  --soft-pink: #f8d7da;
-  --dusty-blue: #8ea6c1;
-  --cream: #fff8f3;
-  --dark-text: #3a3a3a;
+  --porcelain: #ECE4DB;
+  --rosewood: #C4A69B;
+  --stone: #B8AB9C;
+  --parchment: #CFC8BE;
+  --olive: #BAB8A2;
+  --text-dark: #4a403a;
+
 }
 
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--cream);
-  color: var(--dark-text);
+  background-color: var(--porcelain);
+  color: var(--text-dark);
 }
 
 nav {
-  background-color: var(--soft-pink);
-  padding: 15px 30px;
+  background-color: var(--parchment);
+  padding: 16px 28px;
   display: flex;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
+  border-bottom: 1px solid rgba(74, 64, 58, 0.12);
 }
 
 nav strong {
-  font-size: 1.2rem;
-  color: var(--coral);
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+  color: var(--text-dark);
+  margin-right: 8px;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--dark-text);
+  color: rgba(74, 64, 58, 0.85);
   font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 999px;
 }
 
 nav a:hover {
-  color: var(--coral);
+  background: rgba(196, 166, 155, 0.22);
+  color: var(--text-dark);
 }
 
 section {
@@ -75,4 +83,95 @@ footer {
 
 .btn-primary:hover {
   background-color: var(--dusty-blue);
+}
+
+/* Layout */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-alt {
+  background-color: var(--parchment);
+  padding: 80px 0;
+}
+
+.hero {
+  padding: 120px 0 100px 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: rgba(74, 64, 58, 0.6);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.subhead {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  color: rgba(74, 64, 58, 0.8);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--rosewood);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: var(--stone);
+}
+
+.btn-secondary {
+  border: 1px solid var(--rosewood);
+  color: var(--text-dark);
+  padding: 12px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(196, 166, 155, 0.2);
+}
+
+/* Cards */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background-color: var(--porcelain);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(74, 64, 58, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.card p {
+  color: rgba(74, 64, 58, 0.8);
 }

@@ -4,8 +4,32 @@
 
 {% block content %}
 <section class="hero">
-  <h1>Loulita Café</h1>
-  <p>Pastel elegance, artisan coffee, and a touch of Leipzig charm.</p>
-  <a href="/menu/" class="btn-primary">View Our Menu</a>
+  <div class="container">
+    <p class="eyebrow">Leipzig • Fictional boutique café</p>
+    <h1>Loulita Café</h1>
+    <p class="subhead">Artisan coffee, soft pastries, and calm premium vibes.</p>
+
+    <div class="hero-actions">
+      <a href="/menu/" class="btn-primary">View Menu</a>
+      <a href="/about/" class="btn-secondary">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container grid-3">
+    <div class="card">
+      <h3>Minimal menu</h3>
+      <p>Curated items with clear ingredients and allergens.</p>
+    </div>
+    <div class="card">
+      <h3>Calm atmosphere</h3>
+      <p>Soft light, warm tones, and quiet corners.</p>
+    </div>
+    <div class="card">
+      <h3>Seasonal specials</h3>
+      <p>Small-batch pastries and rotating drinks.</p>
+    </div>
+  </div>
 </section>
 {% endblock %}
