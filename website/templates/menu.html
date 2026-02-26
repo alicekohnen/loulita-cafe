@@ -2,8 +2,85 @@
 {% block title %}Menu | Loulita Café{% endblock %}
 
 {% block content %}
-<section>
-  <h1>Menu</h1>
-  <p>This page will become interactive next: items, ingredients, and allergens.</p>
+<section class="section-alt">
+  <div class="container">
+    <h1 class="menu-title">Menu</h1>
+
+    <div class="menu-section">
+      <div class="menu-section-header">
+        <h2 class="menu-section-title">Coffee</h2>
+        <p class="menu-section-note">Espresso-based classics and soft signature drinks.</p>
+      </div>
+
+      <div class="grid-3 menu-grid">
+        {% for item in sections.coffee %}
+          <div class="card">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p class="price">{{ item.price }}</p>
+
+            {% if item.allergens %}
+              <div class="badge-container">
+                {% for allergen in item.allergens %}
+                  <span class="badge">{{ allergen }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-section-header">
+        <h2 class="menu-section-title">Pastry</h2>
+        <p class="menu-section-note">Freshly baked, minimal, and gently sweet.</p>
+      </div>
+
+      <div class="grid-3 menu-grid">
+        {% for item in sections.pastry %}
+          <div class="card">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p class="price">{{ item.price }}</p>
+
+            {% if item.allergens %}
+              <div class="badge-container">
+                {% for allergen in item.allergens %}
+                  <span class="badge">{{ allergen }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <div class="menu-section-header">
+        <h2 class="menu-section-title">Seasonal</h2>
+        <p class="menu-section-note">Limited specials inspired by the season.</p>
+      </div>
+
+      <div class="grid-3 menu-grid">
+        {% for item in sections.seasonal %}
+          <div class="card">
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p class="price">{{ item.price }}</p>
+
+            {% if item.allergens %}
+              <div class="badge-container">
+                {% for allergen in item.allergens %}
+                  <span class="badge">{{ allergen }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
 </section>
 {% endblock %}

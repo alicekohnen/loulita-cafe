@@ -175,3 +175,129 @@ footer {
 .card p {
   color: rgba(74, 64, 58, 0.8);
 }
+
+.badge {
+  display: inline-block;
+  background-color: rgba(196, 166, 155, 0.2);
+  color: var(--text-dark);
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .price {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(196, 166, 155, 0.18);
+  color: var(--text-dark);
+  font-size: 0.72rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+
+.badge-container {
+  margin-top: 8px;
+}
+
+.menu-section-title {
+  margin: 80px 0 24px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: rgba(74, 64, 58, 0.7);
+}
+
+.menu-grid {
+  margin-bottom: 60px;
+}
+
+/* Menu layout polish */
+.menu-title {
+  margin: 0 0 50px 0;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.menu-section {
+  padding: 70px 0 30px 0;
+  border-top: 1px solid rgba(74, 64, 58, 0.10);
+}
+
+.menu-section:first-of-type {
+  border-top: none;
+  padding-top: 20px;
+}
+
+.menu-section-header {
+  max-width: 720px;
+  margin: 0 auto 26px auto;
+  text-align: center;
+}
+
+.menu-section-title {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: rgba(74, 64, 58, 0.70);
+}
+
+.menu-section-note {
+  margin: 0;
+  font-size: 0.98rem;
+  color: rgba(74, 64, 58, 0.75);
+}
+
+/* Card polish */
+.card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(74, 64, 58, 0.10);
+}
+
+/* Make grid responsive */
+@media (max-width: 980px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
