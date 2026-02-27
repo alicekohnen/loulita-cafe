@@ -301,3 +301,51 @@ footer {
     align-items: center;
   }
 }
+
+/* Menu item links (no default blue link) */
+.menu-item-title a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.menu-item-title a:hover {
+  color: rgba(74, 64, 58, 0.7);
+}
+
+/* Menu detail page */
+.menu-detail {
+  max-width: 720px;
+  text-align: left;
+}
+
+.menu-detail h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.menu-detail .price {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 26px;
+  color: rgba(74, 64, 58, 0.85);
+}
+
+.menu-detail h4 {
+  margin-top: 32px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: rgba(74, 64, 58, 0.6);
+}
+
+.menu-detail a {
+  text-decoration: none;
+  color: rgba(74, 64, 58, 0.75);
+}
+
+.menu-detail a:hover {
+  color: var(--text-dark);
+}

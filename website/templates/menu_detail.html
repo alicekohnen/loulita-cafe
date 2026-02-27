@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ item.name }} | Loulita Café{% endblock %}
+
+{% block content %}
+<section class="section-alt">
+  <div class="container menu-detail">
+    <a href="/menu/" style="display:inline-block; margin-bottom:20px;">
+      ← Back to menu
+    </a>
+
+    <h1 style="margin-bottom: 16px;">{{ item.name }}</h1>
+
+    <p style="margin-bottom: 24px; color: rgba(74,64,58,0.8);">
+      {{ item.description }}
+    </p>
+
+    <p class="price" style="font-size:1.2rem; margin-bottom:24px;">
+      €{{ item.price }}
+    </p>
+
+    <h4>Ingredients</h4>
+    <p>{{ item.ingredients }}</p>
+
+    {% if allergens %}
+      <h4 style="margin-top: 24px;">Allergens</h4>
+      <div class="badge-container">
+        {% for allergen in allergens %}
+          <span class="badge">{{ allergen }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

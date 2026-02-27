@@ -6,6 +6,7 @@
   <div class="container">
     <h1 class="menu-title">Menu</h1>
 
+    <!-- COFFEE -->
     <div class="menu-section">
       <div class="menu-section-header">
         <h2 class="menu-section-title">Coffee</h2>
@@ -15,7 +16,9 @@
       <div class="grid-3 menu-grid">
         {% for item in sections.coffee %}
           <div class="card">
-            <h3>{{ item.name }}</h3>
+            <h3 class="menu-item-title">
+              <a href="{% url 'menu_detail' item.id %}">{{ item.name }}</a>
+            </h3>
             <p>{{ item.description }}</p>
             <p class="price">{{ item.price }}</p>
 
@@ -31,6 +34,7 @@
       </div>
     </div>
 
+    <!-- PASTRY -->
     <div class="menu-section">
       <div class="menu-section-header">
         <h2 class="menu-section-title">Pastry</h2>
@@ -40,7 +44,9 @@
       <div class="grid-3 menu-grid">
         {% for item in sections.pastry %}
           <div class="card">
-            <h3>{{ item.name }}</h3>
+            <h3 class="menu-item-title">
+              <a href="{% url 'menu_detail' item.id %}">{{ item.name }}</a>
+            </h3>
             <p>{{ item.description }}</p>
             <p class="price">{{ item.price }}</p>
 
@@ -56,6 +62,7 @@
       </div>
     </div>
 
+    <!-- SEASONAL -->
     <div class="menu-section">
       <div class="menu-section-header">
         <h2 class="menu-section-title">Seasonal</h2>
@@ -65,7 +72,9 @@
       <div class="grid-3 menu-grid">
         {% for item in sections.seasonal %}
           <div class="card">
-            <h3>{{ item.name }}</h3>
+            <h3 class="menu-item-title">
+              <a href="{% url 'menu_detail' item.id %}">{{ item.name }}</a>
+            </h3>
             <p>{{ item.description }}</p>
             <p class="price">{{ item.price }}</p>
 
