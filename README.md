@@ -90,7 +90,9 @@ Open: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ## 📸 Screenshots
 
-*(Add screenshots of Home and Menu here)*
+![Home page](screenshots/home.png)
+
+![Menu page](screenshots/menu.png)
 
 ---
 
